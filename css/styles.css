@@ -1,0 +1,391 @@
+
+
+/* Variables */
+
+:root {
+  --mainColor: #eaeaea;
+  --secondColor: #fff;
+
+  --mainFont: "Open Sans", sans-serif;
+  --secondFont: "Lato", sans-serif;
+
+  --mainText: #333;
+  --secondText: #666;
+
+  --blue: #0D1128;
+  --orange: #FD5F01;
+  --white: #fff;
+  --black: #000;
+
+  --transition: 400ms;
+  --radius: 1rem;
+  --spacing: .2rem;
+}
+
+/* Global */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body{
+  background: var(--mainColor);
+  font-family: var(--mainFont);
+  color: var(--mainText);
+  letter-spacing: var(--spacing);
+}
+
+a{
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+ul{
+  list-style: none;
+}
+h1,h2,h3,h4,h5,h6,strong{
+  font-family: var(--mainFont);
+  color: var(--mainText);
+  line-height: 1.2;
+}
+
+p, li, span, input, textarea{
+  font-family: var(--secondFont);
+  color: var(--secondText);
+  font-size: 1.6rem;
+}
+
+h1{font-size: 5.6rem}
+h2{font-size: 3.5rem}
+h3{font-size: 2.8rem}
+h4{font-size: 2.4rem}
+h5{font-size: 2.0rem}
+h6{font-size: 216rem}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  /*overflow: auto;*/
+}
+
+.section-title{
+  width: 100%;
+  max-width: 50rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section-underline{
+  background: var(--orange);
+  width: 100%;
+  max-width: 20rem;
+  height: .3rem;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+}
+
+/* Header / Home  */
+
+/* Navigation */
+
+.navbar{
+  background: var(--blue);
+  width: 100%;
+  padding: 2rem;
+}
+
+.links{
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links a{
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  color: var(--white);
+  border-bottom: .2rem solid transparent;
+  padding-bottom: .5rem;
+  text-transform: uppercase;
+  transition: all var(--transition) ease-in-out;
+}
+.links a:hover{
+  color: var(--orange);
+  border-bottom: .2rem solid var(--orange);
+}
+
+
+
+/* Hero */
+
+#hero{
+  width: 100%;
+  /*max-width: 1200px;*/
+  height: 55rem;
+  background: linear-gradient(to top ,rgba(13, 17, 40, 0.5), rgba(253, 95, 1, 0.6)) , url(../home-bcg.jpg) center/cover no-repeat;
+  background-blend-mode: multiply;
+
+  position: relative;
+}
+.hero-content{
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+
+}
+#hero h1{
+  font-size: 4rem;
+  font-size: clamp(4rem, 5vw, 6rem);
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 2.5rem;
+}
+
+#hero p{
+  font-size: 2rem;
+  color: var(--white);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  padding: 1rem;
+  border: .1rem solid transparent;
+  border-radius: var(--radius);
+  transition: all var(--transition) ease-in-out;
+}
+
+.hero-btn:hover{
+  color: var(--orange);
+  background: transparent;
+  border-color: var(--orange);
+}
+
+
+/* Recent Courses */
+
+.recentCourses-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5rem;
+
+  align-items: center;
+
+}
+.course{
+  width: 100%;
+  background: var(--blue);
+  text-align: center;
+  min-height: 30rem;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin: 0 auto;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.course h3{
+  font-size: 2.2rem;
+  color: var(--orange);
+  text-transform: capitalize;
+}
+.course p{
+  color: var(--white);
+  font-size: 1.6rem;
+}
+.course span{
+  font-size: 1.6rem;
+  color: #079992;
+
+}
+.course a{
+  display: inline-block;
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 600;
+  max-width: 20rem;
+  padding: .5rem 1rem;
+  margin: 0 auto;
+  border: .1rem solid var(--white);
+  border-radius: var(--radius);
+  transition: all var(--transition) ease-in-out;
+}
+.course a:hover{
+  color: var(--orange);
+  background: var(--white);
+  border-color: transparent;
+}
+
+/* Modules btn */
+
+.seeModules-btn{
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  padding: 0.5rem 1rem;
+  border: .1rem solid;
+  border-radius: var(--radius);
+  transition: all var(--transition) ease-in-out;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.seeModules-btn:hover{
+  color: var(--orange);
+  background: var(--white);
+  border-color: var(--orange);
+}
+
+/* Footer */
+
+#footer{
+  background: var(--blue);
+  width: 100%;
+  max-width: 1200px;
+  min-height: 50vh;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 2rem;
+
+}
+
+#footer .section-title h2{
+  color: var(--white);
+}
+
+
+.resources{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.university-contact, .group-infos{
+  margin-bottom: 5rem;
+  padding: 1rem;
+}
+.university-contact h4, .group-infos h4{
+  color: var(--white);
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+
+}
+.university-contact li, .group-infos li{
+  margin-bottom: 1rem;
+}
+
+.university-contact a, .group-infos a{
+  color: var(--white);
+  text-transform: capitalize;
+  transition: var(--transition) ease-in-out;
+}
+.university-contact a:hover, .group-infos a:hover{
+  color: var(--orange);
+}
+.copyrights{
+  color: var(--white);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* Personal links */
+
+.sifeddine-links{
+  width: 100%;
+  max-width: 15rem;
+  margin: 1rem auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sifeddine-links li a i{
+  font-size: 2.5rem;
+  color: var(--white);
+  transition: all var(--transition);
+}
+.sifeddine-links li a i:hover{
+  color: var(--orange);
+}
+.sifeddine-links li a i:hover{
+  transform: scale(1.3);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px){
+  .container{
+    width: 98%
+  }
+}
+
+@media screen and (min-width: 760px){
+  /* Home */
+
+  /* Hero */
+
+  .hero-content{
+    text-align: center;
+  }
+
+  /* Recent Courses */
+
+  .recentCourses-container{
+    grid-template-columns: 1fr 1fr;
+  }
+  .course{
+    max-width: 45rem;
+  }
+
+  /* Footer */
+  .resources{
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 992px){
+  /* Home */
+
+  /* Modules */
+  .modules-container{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
